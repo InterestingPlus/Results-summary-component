@@ -29,11 +29,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+body{ /*
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 100vh; */
     background-color: rgba(250, 249, 255,
 0.315);
 
