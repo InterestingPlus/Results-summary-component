@@ -5,10 +5,10 @@
     --Green-teal: hsl(166, 100%, 37%);
     --Cobalt-blue: hsl(234, 85%, 45%);
 
-    --Light-b-red: hsla(0, 100%, 67%, 0.05);
-    --Orangey-b-yellow: hsla(39, 100%, 56%, 0.05);
-    --Green-b-teal: hsla(166, 100%, 37%, 0.05);
-    --Cobalt-b-blue: hsla(234, 85%, 45%, 0.05);
+    --Light-b-red: hsla(0, 100%, 67%, 0.1);
+    --Orangey-b-yellow: hsla(39, 100%, 56%, 0.1);
+    --Green-b-teal: hsla(166, 100%, 37%, 0.1);
+    --Cobalt-b-blue: hsla(234, 85%, 45%, 0.1);
     
     /* Gradients */
     --Light-slate-blue-background: hsl(252, 100%, 67%);
@@ -29,14 +29,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{ 
+body{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; 
-    background-color: rgba(250, 249, 255,
-0.315);
-
+    min-height: 100vh;
+    background-color: rgba(250, 249, 255, 0.315);
     font-family: 'Hanken Grotesk', sans-serif;
 }
 /* header{
@@ -57,9 +55,6 @@ main{
     place-items: center;
     box-shadow: 10px 10px 30px rgba(63, 60, 75, 0.096);
     border-radius: 30px;
-
-
-
 }
     @media screen and (max-width: 750px){
         body{
@@ -218,7 +213,7 @@ span p {
     align-items: center;
     margin-top: 20px;
 
-
+}
 button{
     color: #fff;
     font-size: x-large;
@@ -226,18 +221,9 @@ button{
     outline: none;
     height: 58px;
     border: none;
-    background: var(--Dark-gray-blue);
+    background: linear-gradient(var(--Light-slate-blue-background), var(--Light-royal-blue-background));
     border-radius: 50px;
     margin-left: 10px;
-}
-button:hover{
-
-    background: 
-        linear-gradient(var(--Light-slate-blue-background), var(--Light-royal-blue-background));
-
- 
-
-
 }
 
 footer { font-size: 11px; text-align: center; }
