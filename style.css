@@ -36,7 +36,7 @@ body{
     min-height: 100vh;
     background-color: rgba(250, 249, 255,
 0.315);
-    background: red;
+
     font-family: 'Hanken Grotesk', sans-serif;
 }
 /* header{
@@ -57,7 +57,9 @@ main{
     place-items: center;
     box-shadow: 10px 10px 30px rgba(63, 60, 75, 0.096);
     border-radius: 30px;
-    margin-bottom: 2rem;
+    transform: translate(50%, 50%);
+    left: 50%;
+    top: 50%;
 }
     @media screen and (max-width: 750px){
         body{
