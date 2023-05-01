@@ -226,7 +226,7 @@ button{
     outline: none;
     height: 58px;
     border: none;
-    background: --;
+    background: var(--Dark-gray-blue);
     border-radius: 50px;
     margin-left: 10px;
 }
