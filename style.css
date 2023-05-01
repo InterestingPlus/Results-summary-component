@@ -55,6 +55,7 @@ main{
     place-items: center;
     box-shadow: 10px 10px 30px rgba(63, 60, 75, 0.096);
     border-radius: 30px;
+    margin-bottom: 2rem;
 }
     @media screen and (max-width: 750px){
         body{
