@@ -51,6 +51,7 @@ main{
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    width: 1440px;
     max-width: 735px;
     place-items: center;
     box-shadow: 10px 10px 30px rgba(63, 60, 75, 0.096);
@@ -125,11 +126,11 @@ section{
 
 .second .summary{
     position: relative;
-    top: 38px;
-    left: 30px;
+    top: 10px;
+    left: 10px;
 }
 .boxe{
-    margin-top: 50px;
+    margin-top: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -137,7 +138,7 @@ section{
     left: 10px;
 }
 .boxes{
-    width: 82%;
+    width: 98%;
 }
 .one{
     color: var(--Light-red);
@@ -194,20 +195,22 @@ span p:last-child {
     color: rgba(0, 0, 0, 0.4);
 }
 .continue{
-    width: 100%;
+    width: 97%;
     display: flex;
-    justify-content: center;
+    align-items: center;
     margin-top: 20px;
+
 }
 button{
     color: #fff;
     font-size: x-large;
-    width: 80%;
+    width: 100%;
     outline: none;
     height: 58px;
     border: none;
     background: var(--Dark-gray-blue);
     border-radius: 50px;
+    margin-left: 10px;
 }
 button:hover{
     cursor: pointer;
@@ -224,11 +227,14 @@ footer a {
 }
 
 
-/* img{
+img{
     position: absolute;
     user-select: none;
-    opacity: 0.2;
-} */
+    opacity: .5;
+    top: 0;
+    /* width: 375px; */
+    /* width: 1440px; */
+}
 
 
 @media screen and (max-width: 750px){
@@ -240,8 +246,10 @@ footer a {
         max-width: 100%;
         grid-template-columns: 1fr;
     }
-    .first{
+    section{
         min-height: 355px;
+    }
+    .first{
         border-radius: 0 0 30px 30px;
     }
     .first > h2{
@@ -270,12 +278,9 @@ footer a {
     }
 
 
-    .second{
-        min-height: 500px;
-        border-radius: 0;
-    }
     .second .summary{
-        left: 30px;
+        letter-spacing: 0.1em;
+        left: 25px;
         top: 30px;
         font-size: 17.45px;
     }
@@ -297,10 +302,5 @@ footer a {
         width: 87%;
         font-size: 20px;
     }
-
-    footer{
-        position: relative;
-        margin-top: -25px;
-        z-index: 1;
-    }
+    
 }
