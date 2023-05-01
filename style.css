@@ -218,7 +218,7 @@ span p {
     align-items: center;
     margin-top: 20px;
 
-}
+
 button{
     color: #fff;
     font-size: x-large;
@@ -226,9 +226,18 @@ button{
     outline: none;
     height: 58px;
     border: none;
-    background: linear-gradient(var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+    background: --;
     border-radius: 50px;
     margin-left: 10px;
+}
+button:hover{
+
+    background: 
+        linear-gradient(var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+
+ 
+
+
 }
 
 footer { font-size: 11px; text-align: center; }
