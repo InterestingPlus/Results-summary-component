@@ -34,7 +34,9 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: rgba(250, 249, 255, 0.315);
+    background-color: rgba(250, 249, 255,
+0.315);
+    background: red;
     font-family: 'Hanken Grotesk', sans-serif;
 }
 /* header{
