@@ -57,7 +57,7 @@ main{
     place-items: center;
     box-shadow: 10px 10px 30px rgba(63, 60, 75, 0.096);
     border-radius: 30px;
-    transform: translate(50%, 50%);
+    transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
 }
