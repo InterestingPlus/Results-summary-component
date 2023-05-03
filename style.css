@@ -1,14 +1,69 @@
-:root{
+@font-face {
+    font-family: 'HankenGrotesk';
+    font-display: swap;
+    font-weight: 100 900;
+    src: url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+    --clr-primary-hsl-400: 252, 100%, 67%;
+    --clr-primary-hsl-500: 256, 72%, 46%;
+    --clr-secondary-hsl-400: 241, 81%, 54%;
+    --clr-secondary-hsl-500: 241, 72%, 46%;
+
+    --clr-neutral-hsl-100: 0, 0%, 100%;
+    --clr-neutral-hsl-200: 221, 100%, 96%;
+    --clr-neutral-hsl-300: 241, 100%, 89%;
+    --clr-neutral-hsl-700: 224, 30%, 27%;
+
+    --clr-neutral-100: hsl(var(--clr-neutral-hsl-100));
+    --clr-neutral-200: hsl(var(--clr-neutral-hsl-200));
+    --clr-neutral-300: hsl(var(--clr-neutral-hsl-300));
+    --clr-neutral-700: hsl(var(--clr-neutral-hsl-700));
+
+
+    --clr-primary-400: hsl(var(--clr-primary-hsl-400));
+    --clr-primary-500: hsla(var(--clr-primary-hsl-500));
+    --clr-secondary-400: hsl(var(--clr-secondary-hsl-400));
+
+    --gradient-primary: linear-gradient(
+        var(--clr-primary-400), 
+        var(--clr-secondary-400));
+    
+    --gradient-to-transparent: linear-gradient(
+        var(--clr-primary-500),
+        hsl(var(--clr-secondary-hsl-500), 0));
+    
+    --clr-accent-1: 0, 100%, 67%;
+    --clr-accent-2: 39, 100%, 56%;
+    --clr-accent-3: 166, 100%, 37%;
+    --clr-accent-4: 234, 85%, 45%;
+    
+    --font-family-default: 'HankenGrotesk', sans-serif;
+    
+    /* font weight */
+    --fw-regular: 500;
+    --fw-bold: 700;
+    --fw-black: 800;
+    
+    /* font size */
+    --fs-400: 1.125rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.75rem;
+    --fs-800: 2rem;
+    --fs-900: 5rem;
+
     /* Primary */
     --Light-red: hsl(0, 100%, 67%);
     --Orangey-yellow: hsl(39, 100%, 56%);
     --Green-teal: hsl(166, 100%, 37%);
     --Cobalt-blue: hsl(234, 85%, 45%);
 
-    --Light-b-red: hsla(0, 100%, 67%, 0.07);
-    --Orangey-b-yellow: hsla(39, 100%, 56%, 0.07);
-    --Green-b-teal: hsla(166, 100%, 37%, 0.07);
-    --Cobalt-b-blue: hsla(234, 85%, 45%, 0.07);
+    --Light-b-red: hsla(0, 100%, 67%, 0.05);
+    --Orangey-b-yellow: hsla(39, 100%, 56%, 0.05);
+    --Green-b-teal: hsla(166, 100%, 37%, 0.05);
+    --Cobalt-b-blue: hsla(234, 85%, 45%, 0.05);
     
     /* Gradients */
     --Light-slate-blue-background: hsl(252, 100%, 67%);
@@ -21,6 +76,7 @@
     --Pale-blue: hsl(221, 100%, 96%);
     --Light-lavender: hsl(241, 100%, 89%);
     --Dark-gray-blue: hsl(224, 30%, 27%);
+
 }
 @import url(https://fonts.google.com/specimen/Hanken+Grotesk);
 
@@ -35,17 +91,23 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: rgba(250, 249, 255, 0.315);
-    font-family: 'Hanken Grotesk', sans-serif;
+    background-color: rgba(250, 249, 255, 0.8);
+    font-family: var(--font-family-default);
+    color: var(--clr-neutral-700);
+    font-size: var(--fs-400);
+    position: relative;
 }
-/* header{
-    display: grid;
-    place-items: center;
-    width: 1440px;
-    width: 375px;
-    background: red;
-    background: rgb(0, 255, 255);
-} */
+
+/* 
+
+Desktoe
+-width = 1440px
+
+Mobile
+-width = 375px
+
+*/
+
 main{
     background: white;
     position: relative;
@@ -54,9 +116,11 @@ main{
     width: 1440px;
     max-width: 735px;
     place-items: center;
-    box-shadow: 10px 10px 30px rgba(63, 60, 75, 0.096);
     border-radius: 30px;
+    margin-bottom: 2rem;
+    box-shadow: .5rem 1rem 3rem rgba(0, 0, 0, .2);
 }
+
 
 section{
     min-height: 510px;
@@ -69,25 +133,27 @@ section{
     display: flex;
     align-items: center;
     text-align: center;
-    color: #fff;
-    background: linear-gradient(var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+    color: hsl(var(--clr-neutral-hsl-100), .7);
+    background: var(--gradient-primary);
 }
 .second{
+    padding: 30px;
     display: flex;
     flex-direction: column;
     background: white;
 }
 
 .first > h2{
-    font-size: 1.35em;
-    top: 40px;
+    display: flex;
+    font-size: 1.46rem;
+    top: 38px;
+    letter-spacing: 1.3px;
     position: relative;
-    color: rgba(255, 255, 255, 0.603);
 }
 .first .circle{
     width: 200px;
     border-radius: 50%;
-    background: linear-gradient(var(--Violet-blue-circle), var(--Persian-blue-circle));
+    background: var(--gradient-to-transparent);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,48 +163,44 @@ section{
 }
 .first .circle h1{
     position: absolute;
-    font-size: 4em;
-    top: 50px;
+    font-size: 4.7rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-100);
+    top: 40px;
 }
 .first .circle p{
     position: absolute;
-    font-size: 1.1em;
     top: 130px;
-    font-weight: 600;
-    letter-spacing: 0.07em;
-    color: rgba(255, 255, 255, 0.3);
 }
 .first .great{
     position: relative;
-    top: 107px;
-    font-size: 1.8em;
-    color: #ffffffd8;
+    top: 103px;
+    font-size: var(--fs-700);
+    color: var(--clr-neutral-100);
+    letter-spacing: 2.5px;
 }
 .first .greatp{
     position: relative;
-    top: 127px;
+    top: 120px;
     margin: 0px 60px;
-    font-size: 1.1em;
-    color: rgba(255, 255, 255, 0.644);
 }
 
 
 
 .second .summary{
     position: relative;
-    top: 10px;
+    top: 8px;
     left: 10px;
+    font-size: var(--fs-600);
 }
 .boxe{
-    margin-top: 20px;
-    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 33px;
+    width: 100%;
     position: relative;
     left: 10px;
-}
-.boxes{
-    width: 98%;
 }
 .one{
     color: var(--Light-red);
@@ -156,16 +218,16 @@ section{
     color: var(--Cobalt-blue);
     margin-left: 13px;
 }
-span {
+.span {
     width: 95%;
-    height: 55px;
+    /* height: 55px; */
     border-radius: 10px;
-    margin: 18px 0;
+    /* margin: 18px 0; */
     display: flex;
     align-items: center;
     position: relative;
     justify-content: space-between;
-    padding: 15px 12px;
+    padding: 1rem;
 }
 .num1{
     background: var(--Light-b-red);
@@ -182,45 +244,40 @@ span {
 
 .content{
     display: flex;
-    padding: 0 6px;
+    font-weight: var(--fw-black);
+    color: hsl(var(--clr-neutral-hsl-700), .5);
 }
 .score{
+    color: var(--clr-neutral-700);
     margin-right: 10px;
-    color: black;
-}
-span p {
-    font-weight: 700;
-}
-span p:last-child {
-    color: rgba(0, 0, 0, 0.4);
 }
 .continue{
     width: 97%;
     display: flex;
-    align-items: center;
-    margin-top: 20px;
-
+    justify-content: center;
+    margin-top: 40px;
 }
 button{
-    color: #fff;
-    font-size: x-large;
+    color: var(--clr-neutral-100);
+    background: var(--clr-neutral-700);
+    font-size: 20px;
     width: 100%;
     outline: none;
     height: 58px;
     border: none;
-    background: var(--Dark-gray-blue);
     border-radius: 50px;
     margin-left: 10px;
 }
-button:hover{
-    cursor: pointer;
-    background: linear-gradient(to bottom left,var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+button:hover,
+button:focus
+{
+    background: var(--gradient-primary);
 }
 
 footer {
-    margin-top: 20px; 
+    font-family: sans-serif;
     font-size: 11px;
-    text-align: center; 
+    text-align: center;
 }
 footer a {
     color: hsl(228, 45%, 44%);
@@ -230,79 +287,88 @@ footer a {
 img{
     position: absolute;
     user-select: none;
-    opacity: .5;
-    top: 0;
-    /* width: 375px; */
-    /* width: 1440px; */
+    opacity: 0.2;
+    transform: translateY(-16px);
 }
 
-
-@media screen and (max-width: 750px){
+@media screen and (max-width: 830px){
     body{
+        max-width: 100vw;
+        align-items: center;
         justify-content: flex-start;
+        background: #fff;
     }
     main{
-        width: 375px;
-        max-width: 100%;
+        width: 100%;
+        /* max-width: 375px; */
         grid-template-columns: 1fr;
-    }
-    section{
-        min-height: 355px;
+        box-shadow: none;
     }
     .first{
+        min-height: 340px;
         border-radius: 0 0 30px 30px;
     }
     .first > h2{
-        top: 22px;
-        font-size: 17.2px;
+        font-size: 1.05rem;
+        top: 8.5px;
+        letter-spacing: 0.3px;
     }
     .first .circle{
-        top: 50px;
         width: 140px;
+        top: 35px;
     }
     .first .circle h1{
-        top: 30px;
-        font-size: 60px;
+        font-size: 3.5rem;
+        top: 23px;
     }
     .first .circle p{
-        top: 100px;
-        font-size: 15px;
+        top: 94px;
+        font-size: .98rem;
+        font-weight: var(--fw-black);
     }
     .first .great{
-        top: 80px;
-        font-size: 23px;
+        top: 58px;
+        font-size: var(--fs-600);
+        letter-spacing: 0.3px;
     }
     .first .greatp{
-        top: 90px;
-        font-size: 15px;
+        font-size: 1rem;
+        top: 64px;
+        font-weight: var(--fw-bold);
+        margin: 0px 58px;
     }
-
 
     .second .summary{
-        letter-spacing: 0.1em;
-        left: 25px;
-        top: 30px;
-        font-size: 17.45px;
+        position: relative;
+        top: -6px;
+        left: 2px;
+        font-size: 1.1rem;
     }
-    .second .boxe{
-        top: 30px;
+    .boxe{
+        margin-left: -10px;
+        margin-top: 20px;
+        gap: 22px;
     }
-    .second .boxe .boxes{
-        width: 90%;
+    .span{
+        width: 100%;
+        padding: .95rem;
+        font-size: .95rem;
     }
-    .second .boxe .boxes span{
-        height: 57px;
-        margin: 0 0 15.5px 0;
+    .num{
+        transform: translate(-5px);
     }
+
     .continue{
         width: 100%;
-        margin-top: 38px;
-        height: 85px;
-        justify-content: center;
     }
     button{
-        width: 87%;
-        font-size: 20px;
+        font-size: 1.15rem;
+        letter-spacing: .3px;
+        margin-left: 0;
+        margin-top: -15px;
     }
-    
+
+    footer{
+        transform: translateY(-50px);
+    }
 }
