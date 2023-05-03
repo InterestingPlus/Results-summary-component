@@ -91,6 +91,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    height: 150vh;
     background-color: rgba(250, 249, 255, 0.8);
     font-family: var(--font-family-default);
     color: var(--clr-neutral-700);
@@ -113,12 +114,11 @@ main{
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 1440px;
     max-width: 735px;
     place-items: center;
     border-radius: 30px;
     margin-bottom: 2rem;
-    box-shadow: .5rem 1rem 3rem rgba(0, 0, 0, .2);
+    box-shadow: .5rem 1rem 3rem rgba(0, 51, 190, 0.096);
 }
 
 
@@ -284,8 +284,9 @@ footer a {
 img{
     position: absolute;
     user-select: none;
-    opacity: 0.2;
-    transform: translateY(-16px);
+    opacity: 0.5;
+    top: 0;
+    /* transform: translateY(-16px); */
 }
 
 @media screen and (max-width: 830px){
